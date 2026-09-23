@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小郑 — 个人作品集 | Portfolio</title>
+  <meta name="description" content="小郑个人作品集：软件工程专业，关注 AI 辅助开发与大语言模型应用。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Noto+Serif+SC:wght@500;700;900&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== 顶部导航 ===== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="#hero" class="logo">小郑.<span class="logo-en">XIAO ZHENG</span></a>
+      <nav class="topnav" id="topnav" aria-label="主导航">
+        <a href="#works" class="nav-link"><span class="nl-no">01</span>作品</a>
+        <a href="#about" class="nav-link"><span class="nl-no">02</span>关于</a>
+        <a href="#contact" class="nav-link"><span class="nl-no">03</span>联系</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="topbar-meta">
+      <span class="tm-left">PORTFOLIO / 2026</span>
+      <span class="tm-right">软件工程在读 · 中国广州</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 封面：大字姓名 + 橙底人像 ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="greet">你好，我是</p>
+          <h1 class="big-name">小郑<span class="dot">.</span></h1>
+          <p class="focus"><span class="focus-dash"></span>专注 <strong>AI 辅助开发</strong> 与 <strong>大语言模型</strong> 应用</p>
+          <p class="intro">软件工程专业在读，关注 <strong>AI 辅助开发与大语言模型技术</strong>。主要使用 Python、Java 和 TypeScript 进行项目开发，持续学习前后端开发、数据可视化和 AI 应用构建。</p>
+          <div class="hero-actions">
+            <a href="#works" class="btn btn-dark">查看作品 →</a>
+            <a href="#contact" class="btn btn-line">联系我</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20studio%20portrait%20of%20a%20young%20chinese%20male%20university%20student%20short%20black%20hair%2C%20white%20shirt%20with%20knit%20vest%20and%20tie%2C%20calm%20confident%20expression%2C%20solid%20vivid%20orange%20background%2C%20magazine%20cover%20photography%2C%20sharp%20focus&image_size=portrait_4_3" alt="小郑 照片" />
+            <p class="photo-cap">AI-ASSISTED DEV · LLM APPLICATIONS · GUANGZHOU</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 项目作品（由 JS 渲染） ===== -->
+    <section class="works" id="works">
+      <header class="sec-head">
+        <span class="ghost-no" aria-hidden="true">01</span>
+        <h2 class="sec-title">精选作品<span class="dash"></span></h2>
+        <p class="sec-sub">Selected Works · 项目经历 —— 以下四个项目完整记录了从需求到实现的过程。</p>
+      </header>
+
+      <div class="filter-bar">
+        <div class="filters" id="filters"><!-- 类别筛选胶囊（JS 生成） --></div>
+        <p class="count" id="count"></p>
+      </div>
+
+      <div class="works-list" id="worksList"><!-- 项目版面注入处 --></div>
+    </section>
+
+    <!-- ===== 关于我 ===== -->
+    <section class="about" id="about">
+      <header class="sec-head">
+        <span class="ghost-no" aria-hidden="true">02</span>
+        <h2 class="sec-title">关于我<span class="dash"></span></h2>
+        <p class="sec-sub">About Me —— 软件工程专业学生，关注 AI 辅助开发与大语言模型技术。</p>
+      </header>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>我叫小郑，是一名软件工程专业学生，目前主要关注 AI 辅助开发与大语言模型技术。</p>
+          <p>平时主要使用 Python、Java 和 TypeScript 进行项目开发，也在持续学习前后端开发、数据可视化和 AI 应用构建。</p>
+          <dl class="facts">
+            <div><dt>专业</dt><dd>软件工程</dd></div>
+            <div><dt>方向</dt><dd>AI 辅助开发 · 大语言模型应用</dd></div>
+            <div><dt>城市</dt><dd>中国 · 广州</dd></div>
+            <div><dt>状态</dt><dd class="open">广州软件学院 · 在读</dd></div>
+          </dl>
+        </div>
+        <div class="about-side">
+          <p class="side-label"><span class="dot"></span>项目经历 / PROJECTS</p>
+          <ol class="timeline">
+            <li><time>2025.04</time><p>轻记账 —— 极简记账微信小程序</p></li>
+            <li><time>2025.09</time><p>拾光集市 —— 校园二手交易平台</p></li>
+            <li><time>2026.03</time><p>城市脉搏 —— 城市数据可视化大屏</p></li>
+            <li><time>2026.07</time><p>课语通 —— 大语言模型课程问答助手</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 联系方式 ===== -->
+    <footer class="contact" id="contact">
+      <header class="sec-head">
+        <span class="ghost-no" aria-hidden="true">03</span>
+        <h2 class="sec-title">联系我<span class="dash"></span></h2>
+        <p class="sec-sub">Get in Touch —— 交流、合作与实习机会都欢迎联系。</p>
+      </header>
+      <a class="contact-mail" href="mailto:xiaohe@example.com">xiaohe@example.com<span>↗</span></a>
+      <ul class="contact-links">
+        <li><a href="https://github.com/xiaohe-dev" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://xiaohe.dev" target="_blank" rel="noopener">个人主页 ↗</a></li>
+        <li><span>微信：xiaohezi</span></li>
+        <li><span>所在地：中国·广州</span></li>
+      </ul>
+      <div class="colophon">
+        <p>© 2026 小郑 — 本页面以原生 HTML / CSS / JavaScript 手工完成，无框架。</p>
+        <a href="#hero" class="back-top">回到顶部 ↑</a>
+      </div>
+    </footer>
+  </main>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
