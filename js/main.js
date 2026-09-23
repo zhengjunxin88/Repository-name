@@ -171,11 +171,40 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- 5. 深浅色主题切换 ---------- */
+  function initTheme() {
+    var root = document.documentElement;
+    var btn = document.getElementById("themeToggle");
+    var KEY = "theme";
+
+    function apply(theme) {
+      root.setAttribute("data-theme", theme);
+      if (btn) {
+        var dark = theme === "dark";
+        btn.setAttribute("aria-pressed", String(dark));
+        btn.setAttribute("aria-label", dark ? "切换到浅色主题" : "切换到深色主题");
+      }
+    }
+
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    apply(saved === "dark" ? "dark" : "light");
+
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        apply(next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderFilters();
     renderProjects();
     initNav();
     initScrollSpy();
     initReveal();
+    initTheme();
   });
 })();
